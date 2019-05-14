@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Escola Secundária de Maximinos</title>
+</head>
+<body>
+<table bgcolor="yellow" border="2">
+    <td><a href="p1">Página 1</a></td>
+    <td><a href="p2">Página 2</a></td>
+    <td><a href="login">Entrar</a></td>
+</table>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2019 Paulo Côto
+    {% endblock %}
+</div>
+</body>
+</html>

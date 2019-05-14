@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <title>Escola Secundária de Maximinos</title>
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+
+
+
+
+    </style>
+<body>
+<center>
+    <div class="navbar">
+        <a class="active" href="/"><i style="color:green" class="fa fa-fw fa-home"></i> Início</a>
+        <a href="p1"><i style="color:blue" class="fab fa-spotify"></i> Produtos</a>
+        <a href="p2"><i style="color:red" class="fa fa-fw fa-search"></i> Procurar</a>
+        <a href="p3"><i style="color:magenta" class="fa fa-fw fa-envelope"></i> Contactos</a>
+        <a href="login"><i style="color:cyan" class="fas fa-unlock-alt"></i> Entrar</a>
+        <a href="reg"><i style="color:yellow" class="fas fa-user"></i> Registo</a>
+    </div>
+</center>
+
+<!---------------------------------->
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2019 Paulo Côto
+    {% endblock %}
+</div>
+</body>
+</html>
